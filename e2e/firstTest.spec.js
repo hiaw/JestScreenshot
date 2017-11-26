@@ -10,6 +10,9 @@ describe('Example', () => {
   })
 
   it('should have capture screen', async () => {
+    // Try using command line instead
+    // xcrun simctl io booted screenshot screen.png
+
     captureScreen({
       format: 'jpg',
       quality: 0.8,

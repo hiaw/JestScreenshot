@@ -4,29 +4,29 @@
 	"private": true,
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
-    "test:e2e": "detox test -c ios.sim.debug",
-    "test:e2e:build": "detox build",
-    "jest-detox": "jest --verbose --runInBand --forceExit -c e2e/config.json"
+		"test": "jest",
+		"test:e2e": "detox test -c ios.sim.debug",
+		"test:e2e:build": "detox build",
+		"jest-detox": "jest --verbose --runInBand --forceExit -c e2e/config.json"
 	},
 	"dependencies": {
 		"react": "16.0.0",
-		"react-native": "0.50.4",
-		"react-native-view-shot": "^2.2.0"
+		"react-native": "0.50.4"
 	},
 	"devDependencies": {
 		"babel-jest": "21.2.0",
 		"babel-preset-react-native": "4.0.0",
 		"detox": "^5.10.0",
 		"jest": "21.2.1",
+		"react-native-view-shot": "^2.2.0",
 		"react-test-renderer": "16.0.0"
 	},
 	"jest": {
 		"preset": "react-native"
 	},
 	"detox": {
-    "test-runner": "jest",
-    "runner-config": "e2e/config.json",
+		"test-runner": "jest",
+		"runner-config": "e2e/config.json",
 		"configurations": {
 			"ios.sim.debug": {
 				"binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/JestScreenshot.app",

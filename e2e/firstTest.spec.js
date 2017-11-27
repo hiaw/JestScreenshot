@@ -1,5 +1,3 @@
-import { captureScreen } from 'react-native-view-shot'
-
 describe('Example', () => {
   beforeEach(async () => {
     await device.reloadReactNative()
@@ -13,12 +11,8 @@ describe('Example', () => {
     // Try using command line instead
     // xcrun simctl io booted screenshot screen.png
 
-    captureScreen({
-      format: 'jpg',
-      quality: 0.8,
-    }).then(
-      uri => console.log('Image saved to', uri),
-      error => console.error('Oops, snapshot failed', error),
-    )
+    const filename = 'test.png'
+    const { spawnSync } = require('child_process')
+    spawnSync('xcrun', ['simctl', 'io', 'booted', 'screenshot', filename])
   })
 })

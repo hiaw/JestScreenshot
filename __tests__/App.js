@@ -15,7 +15,7 @@ it('renders correctly', () => {
 })
 
 it('should match capture screen', async () => {
-  fs.readFile('test.png', (err, data) => {
+  fs.readFile('screenshots/test.png', (err, data) => {
     expect(data).toMatchImageSnapshot()
   })
 })

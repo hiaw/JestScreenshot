@@ -11,7 +11,7 @@ describe('Example', () => {
     // Try using command line instead
     // xcrun simctl io booted screenshot screen.png
 
-    const filename = 'test.png'
+    const filename = 'screenshots/test.png'
     const { spawnSync } = require('child_process')
     spawnSync('xcrun', ['simctl', 'io', 'booted', 'screenshot', filename])
   })

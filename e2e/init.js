@@ -1,13 +1,11 @@
-const detox = require('detox')
-const config = require('../package.json').detox
+require('babel-polyfill');
+const detox = require('detox');
+const config = require('../package.json').detox;
 
-// Set the default timeout
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 120000
+before(async () => {
+  await detox.init(config);
+});
 
-beforeAll(async () => {
-  await detox.init(config)
-})
-
-afterAll(async () => {
-  await detox.cleanup()
-})
+after(async () => {
+  await detox.cleanup();
+});
